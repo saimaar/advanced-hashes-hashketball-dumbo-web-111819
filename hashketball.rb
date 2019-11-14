@@ -335,6 +335,7 @@ def long_name_steals_a_ton?
   obj = game_hash()
   highest_steal = nil
   steal_for_longest_name = nil 
+  longest_name = player_with_longest_name()
   
   obj.each{|k,v|
     sec_obj = v
@@ -344,12 +345,10 @@ def long_name_steals_a_ton?
       
       if highest_steal == nil || steals > highest_steal
         highest_steal = steals
-        highest_steal
        
            
-      if longest_name = player_with_longest_name().length
+      if longest_name == ele[:player_name]
         steal_for_longest_name = steals
-        steal_for_longest_name
       end 
     end 
  
